@@ -1,0 +1,29 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'course_selection/index.css' %}">
+
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>主界面</title>
+</head>
+
+<body>
+    <div id = "function">
+        <div id="function_1">
+            <p>主要功能</p>
+        </div>
+        <div id="function_2">
+            <div id="function_2_1">
+                    <a href="{% url 'select' %}"><img src="{% static 'course_selection/images/select.png' %}" >开始选课</a>
+            </div>
+            <div id="function_2_2">
+                    <a href="{% url 'view' %}"><img src="{% static 'course_selection/images/view.png' %}" >查看课程</a>
+            </div>
+            <div id="function_2_3">
+                    <a href="{% url 'delete' %}"><img src="{% static 'course_selection/images/delete.png' %}" >退选课程</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

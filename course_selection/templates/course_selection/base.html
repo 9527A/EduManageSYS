@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'course_selection/base.css' %}">
+
+<body>
+    <div id="main_body">
+        <table border="2" cellspacing="5" width="700">
+            <tr>
+                <a href="{% url 'index' %}">返回</a>
+            </tr>
+        {% block content %}
+
+        {% endblock %}
+        </table>
+    </div>
+</body>
