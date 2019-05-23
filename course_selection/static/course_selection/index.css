@@ -1,48 +1,41 @@
 
 *{margin:0px;padding:0px;}
-  #function{
-      width: 900px;
-      height:425px;
-      margin: 50px auto 0px;
-  }
-  #function_1{
+#function{
+    width: 900px;
+    height:425px;
+    margin: 50px auto 0px;
+}
+.function_1{
     width: 900px;
     height:150px;
     margin: 0px;
     border:2px solid black;
     background: blue;
-  }
-  #function_2{
+}
+.function_2{
     width: 900px;
     height:300px;
     margin: 25px 0px 0px;
-  }
-  #function_2_1{
+}
+.function_2_1{
     width: 300px;
     height:300px;
     float: left;
-  }
-  #function_2_2{
+}
+.function_2_2{
     width: 300px;
     height:300px;
     float: left;
-  }
-  #function_2_3{
+}
+.function_2_3{
     width: 300px;
     height:300px;
     float: left;
-  }
-  #function p{
+}
+#function p{
     font-size:80px;
     color:black;
     font-family:"微软雅黑";
     text-indent:20px;
     text-align:center;
-  }
-  #function p1{
-    font-size:30px;
-    color:black;
-    font-family:"微软雅黑";
-    text-indent:20px;
-    text-align:center;
-  }
+}

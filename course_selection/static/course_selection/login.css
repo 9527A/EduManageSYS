@@ -1,37 +1,21 @@
 *{margin:0px;padding:0px;}
     #login{
         width: 230px;
-        height:26px;
+        height: 90px;
+        line-height: 45px;
         margin:0px auto 0px;
         border-radius: 5px;
-        background: rgb(98, 88, 230);}
-    #login_1{
-        width: 230px;
-        height:26px;
-        margin:50px auto 0px;
-        border-radius: 5px;
-        background: rgb(98, 88, 230);}
-    #login_2{
-        width: 230px;
-        height:50px;
-        margin:50px auto 0px;
-        border-radius: 5px;
-        }
-    #login_2_1{
+        background: rgb(98, 88, 230);
+        top: 70px;
+    }
+    .btn{
+        float: right;
+        height: 30px;
         width: 100px;
-        height:30px;
-        margin:0px 125px 0px;
-        border-radius: 5px;
-        }
-    #login_2_2{
-        width: 80px;
-        height:20px;
-        margin:0px 0px 0px;
-        border-radius: 5px;
-        }
+    }
     #index_logo{
-      background: url('images/index_logo.png');
-      width: 676px;
-      height: 191px;
-      margin: 0px auto 0px;
-        }
+        background: url('images/index_logo.png');
+        width: 676px;
+        height: 191px;
+        margin: 0px auto 0px;
+    }

@@ -6,6 +6,17 @@ class User(models.Model):
     password = models.CharField(max_length=128)
     flag = models.IntegerField()
 
+    def check_pwd(stuid, pwd):
+        try:
+            user = User.objects.get(id=stuid)
+        except Exception as e:
+            user = None
+        if user:
+            if pwd == user.password:
+                return True
+            else:
+                return False
+
 class Subject(models.Model):
     subid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=20)
