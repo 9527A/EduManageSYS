@@ -10,7 +10,7 @@
     height:150px;
     margin: 0px;
     border:2px solid black;
-    background: blue;
+    background: rgb(66, 129, 224);
 }
 .function_2{
     width: 900px;
@@ -38,4 +38,11 @@
     font-family:"微软雅黑";
     text-indent:20px;
     text-align:center;
+}
+#function p1{
+    font-size:20px;
+    color:red;
+    font-family:"微软雅黑";
+    text-indent:20px;
+    text-align:left;
 }

@@ -2,13 +2,7 @@
 
 
 {% block content %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
-    {% include "base_select.html" %}
+    {% for course in courses %}
+        {% include "base_select.html" %}
+    {% endfor %}
 {% endblock %}

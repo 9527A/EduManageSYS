@@ -6,26 +6,18 @@ class User(models.Model):
     password = models.CharField(max_length=128)
     flag = models.IntegerField()
 
-    def check_pwd(stuid, pwd):
-        try:
-            user = User.objects.get(id=stuid)
-        except Exception as e:
-            user = None
-        if user:
-            if pwd == user.password:
-                return True
-            else:
-                return False
 
 class Subject(models.Model):
     subid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=20)
+
 
 class Course(models.Model):
     couid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
     flag = models.IntegerField()
     subject = models.ManyToManyField(Subject)
+
 
 class Student(models.Model):
     stuid = models.OneToOneField(User, on_delete=models.CASCADE)
