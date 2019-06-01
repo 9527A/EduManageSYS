@@ -2,20 +2,29 @@
 
 
 {% block content %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
-    {% include "base_view.html" %}
+    {% for course in courses %}
+        <tr height="100">
+            <td>{{ course.name }}</td>
+            <td>
+                {% if course.flag == 0 %}
+                    必修
+                {% endif %}
+                {%  if course.flag == 10 %}
+                    专业课必修
+                {% endif %}
+                {%  if course.flag == 11 %}
+                    专业课限选
+                {% endif %}
+                {%  if course.flag == 21 %}
+                    体育课限选
+                {% endif %}
+                {%  if course.flag == 31 %}
+                    公共课限选
+                {% endif %}
+                {%  if course.flag == 32 %}
+                    慕课任选
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
 {% endblock %}

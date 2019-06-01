@@ -3,6 +3,30 @@
 
 {% block content %}
     {% for course in courses %}
-        {% include "base_select.html" %}
+        <tr>
+            <td>{{ course.name }}</td>
+            <td>{{ course.nownum }}/{{ course.maxnum }}</td>
+            <td width="100">
+                <form method="post" action="{% url 'select' %}">
+                    <input type="text" name="couid" value = {{ course.couid }} readonly>
+                    {% if course in courses_on %}
+                        <button type="button">已选</button>
+                    {% else %}
+                        {% if course.flag in flags_on %}
+                            <button type="button">已选同类型</button>
+                        {% else %}
+                        <button type="submit">确认选择</button>
+                        {% endif %}
+                    {% endif %}
+                </form>
+            </td>
+        </tr>
     {% endfor %}
+    {% if messages %}
+        <script>
+            {% for msg in messages %}
+                alert('{{ msg.message }}');
+            {% endfor %}
+        </script>
+    {% endif %}
 {% endblock %}

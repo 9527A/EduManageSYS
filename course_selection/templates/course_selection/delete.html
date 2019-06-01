@@ -2,13 +2,16 @@
 
 
 {% block content %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
-    {% include "base_delete.html" %}
+    {% for course in courses %}
+    <tr>
+        <td>{{ course.name }}</td>
+        <td>{{ course.nownum }}/{{ course.maxnum }}</td>
+        <td width="100">
+            <form method="post" action="{% url 'delete' %}">
+                <input type="text" name="couid" value = {{ course.couid }} readonly>
+                <button type="submit">确认退选</button>
+            </form>
+        </td>
+    </tr>
+{% endfor %}
 {% endblock %}

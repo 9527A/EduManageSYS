@@ -16,14 +16,25 @@ class Course(models.Model):
     couid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
     flag = models.IntegerField()
+    maxnum = models.IntegerField(default=40)
+    nownum = models.IntegerField(default=0)
     subject = models.ManyToManyField(Subject)
+    '''
+    	0：必修
+		10：专业课必修
+		11：专业课限选
+		21：体育课限选
+		31：公共课限选
+        32：慕课任选
+    '''
 
 
 class Student(models.Model):
-    stuid = models.OneToOneField(User, on_delete=models.CASCADE)
+    stuid = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     name = models.CharField(max_length=10)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     course = models.ManyToManyField(Course,null=True,blank=True)
+
 
 
 
