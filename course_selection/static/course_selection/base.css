@@ -1,6 +1,22 @@
 *{margin:0px;padding:0px;}
-    #main_body{
-        width: 700px;
-        height: 600px;
-        margin: 30px auto 0px;
-    }
+#main_body{
+    width: 700px;
+    height: 600px;
+    margin: 30px auto 0px;
+}
+.top{
+    width: 700px;
+    height: 100px;
+    margin: 0px;
+    background: rgb(196, 206, 221);
+}
+.top span{
+    float: left;
+}
+.top p{
+    font-size:40px;
+    color:rgb(49, 111, 204);
+    font-family:"微软雅黑";
+    line-height:100px;
+    text-align:center;
+}

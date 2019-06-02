@@ -8,10 +8,11 @@
     </head>
 <body>
     <div id="main_body">
+        <div class="top">
+            <span><a href="{% url 'index' %}"><img src="{% static 'course_selection/images/return.jpg' %}" ></a></span>
+            <p>{{ title }}</p>
+        </div>
         <table border="2" cellspacing="5" width="700">
-            <tr>
-                <a href="{% url 'index' %}">返回</a>
-            </tr>
         {% block content %}
 
         {% endblock %}
