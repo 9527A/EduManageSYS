@@ -3,8 +3,8 @@ from django.db import models
 # Create your models here.
 class User(models.Model):
     id = models.CharField(max_length=12, primary_key=True)
-    password = models.CharField(max_length=128)
-    flag = models.IntegerField()
+    password = models.CharField(max_length=128,null=True,blank=True)
+    flag = models.IntegerField(null=True,blank=True)
 
 
 class Subject(models.Model):
@@ -16,9 +16,9 @@ class Course(models.Model):
     couid = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=32)
     flag = models.IntegerField()
-    maxnum = models.IntegerField(default=40)
-    nownum = models.IntegerField(default=0)
-    subject = models.ManyToManyField(Subject)
+    maxnum = models.IntegerField(null=True,blank=True)
+    nownum = models.IntegerField(default=0,null=True,blank=True)
+    subject = models.ManyToManyField(Subject,null=True,blank=True)
     '''
     	0：必修
 		10：专业课必修
@@ -32,7 +32,7 @@ class Course(models.Model):
 class Student(models.Model):
     stuid = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     name = models.CharField(max_length=10)
-    subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
+    subject = models.ForeignKey(Subject, on_delete=models.CASCADE,null=True,blank=True)
     course = models.ManyToManyField(Course,null=True,blank=True)
 
 
